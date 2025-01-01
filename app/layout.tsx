@@ -5,16 +5,16 @@ import './globals.css'
 const poppins = Poppins({
   variable: '--font-poppins',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Add the desired font weights
+  weight: ['400', '500', '600', '700']
 })
 
 export const metadata: Metadata = {
   title: 'Piotr Zajas Portfolio',
-  description: 'Modern and MInimalist next js portfolio',
+  description: 'Modern and MInimalist next js portfolio'
 }
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode
 }>) {
