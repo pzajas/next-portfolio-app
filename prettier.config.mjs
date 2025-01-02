@@ -8,6 +8,7 @@ const prettierConfig = {
   printWidth: 120,
   useTabs: false,
   tabWidth: 2,
+  endOfLine: 'crlf',
   trailingComma: 'none',
   plugins: ['prettier-plugin-classnames']
 }
