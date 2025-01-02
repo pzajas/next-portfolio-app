@@ -9,6 +9,7 @@ const prettierConfig = {
   useTabs: false,
   tabWidth: 2,
   trailingComma: 'none',
+  plugins: ['prettier-plugin-classnames']
 }
 
 export default prettierConfig
