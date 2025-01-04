@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { PiMoonFill } from 'react-icons/pi'
 import { RxCross1, RxHamburgerMenu } from 'react-icons/rx'
 
 export const NavSection = () => {
@@ -23,12 +24,8 @@ export const NavSection = () => {
         </div>
       </div>
 
-      <div className="hidden sm:flex flex-row space-x-4 gap-2">
-        {navItems.map((item, index) => (
-          <div key={index} className={navLinkClass}>
-            {item}
-          </div>
-        ))}
+      <div className="cursor-pointer">
+        <PiMoonFill size={25} />
       </div>
 
       <div
