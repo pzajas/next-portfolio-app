@@ -60,7 +60,7 @@ const AnimatedName = () => {
                 })
                 resolve() // Resolve when finished
               }
-            }, 100)
+            }, 75)
           })
         })
       )
@@ -70,7 +70,7 @@ const AnimatedName = () => {
   }, [name]) // Adding 'name' as a dependency so the effect runs when name changes
 
   return (
-    <motion.p className="text-[#a1a1a1] text-[1.2rem] font-semibold mr-[6rem] tracking-tight font-mono">
+    <motion.p className="text-[#a1a1a1] text-[1.2rem] font-semibold tracking-tight">
       {!isShuffling
         ? ' ' // Hide the name initially when shuffling is not started
         : shuffledName.map((letter, idx) => (
@@ -78,7 +78,9 @@ const AnimatedName = () => {
               key={idx}
               style={{
                 display: 'inline-block', // Ensure each letter is inline-block
-                width: '1.5ch' // Set a fixed width for all letters
+                width: '1.5ch', // Set a fixed width for all letters
+                textAlign: 'center', // Center-align the letters
+                letterSpacing: '0.1ch' // Adjust spacing between characters
               }}
             >
               {letter}
