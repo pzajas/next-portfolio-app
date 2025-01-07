@@ -14,6 +14,19 @@
   }
 }
 
+.menu__item {
+  @apply text-white text-2xl w-fit block relative cursor-pointer hover:text-red-500;
+}
+
+.menu__item::after {
+  content: '';
+  @apply block absolute h-[3px] bg-red-500 w-6 scale-x-0 transition duration-300 origin-left;
+}
+
+.menu__item:hover::after {
+  @apply scale-x-100;
+}
+
 body {
   color: var(--foreground);
   background: '#181818';

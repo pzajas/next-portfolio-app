@@ -4,26 +4,23 @@ import { BsArrowDownRightCircleFill, BsArrowRightCircleFill } from 'react-icons/
 const AnimatedButtons = () => {
   return (
     <div className="space-x-4 flex">
-      {/* First Button */}
       <motion.button
         className="w-auto rounded-full bg-red-500 py-2 px-4 text-white flex items-center justify-between space-x-4"
-        whileHover={{ scale: 1.1 }} // Hover effect: scale and rotate
-        whileTap={{ scale: 0.95 }} // Tap effect: slight shrink
-        transition={{ type: 'spring', stiffness: 300 }} // Smooth animation transition
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 300 }}
       >
         <p>Projects</p>
-        {/* Animated Icon */}
         <motion.div whileHover={{ x: 2 }} transition={{ type: 'spring', stiffness: 300 }}>
           <BsArrowRightCircleFill />
         </motion.div>
       </motion.button>
 
-      {/* Second Button */}
       <motion.button
         className="w-auto rounded-full bg-red-500 py-2 px-4 text-white flex items-center justify-between space-x-4"
-        whileHover={{ scale: 1.1 }} // Hover effect with different rotation
-        whileTap={{ scale: 0.95 }} // Tap effect: slight shrink
-        transition={{ type: 'spring', stiffness: 300 }} // Smooth animation transition
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 300 }}
       >
         <p>Download CV</p>
         {/* Animated Icon */}
