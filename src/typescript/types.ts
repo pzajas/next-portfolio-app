@@ -1,5 +1,5 @@
-export interface HamburgerMenuProps {
+export interface PortfolioMenuProps {
   setIsMenuOpen: (isOpen: boolean) => void
-  isSmallScreen: boolean
   isMenuOpen: boolean
+  isSmallScreen?: boolean
 }

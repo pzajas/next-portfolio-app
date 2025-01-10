@@ -14,9 +14,11 @@ export const AnimatedSubheader = () => {
   }, [])
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <motion.p
-        className="text-white text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[9rem] font-semibold m-0 relative z-0"
+        className={
+          'text-primary text-[42px] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem] font-[500] m-0 relative z-0'
+        }
         key={currentWordIndex}
         initial={{ opacity: 0, x: 50 }}
         animate={{

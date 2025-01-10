@@ -1,12 +1,12 @@
-import { HamburgerMenuProps } from '@/src/typescript/types'
+import { PortfolioMenuProps } from '@/src/typescript/types'
 import { motion } from 'framer-motion'
 import { PiMoonFill } from 'react-icons/pi'
 import { RiCloseFill, RiMenu2Fill } from 'react-icons/ri'
 
-export const HamburgerMenuIcon = ({ setIsMenuOpen, isMenuOpen, isSmallScreen }: HamburgerMenuProps) => {
+export const HamburgerMenuIcon = ({ setIsMenuOpen, isMenuOpen, isSmallScreen }: PortfolioMenuProps) => {
   return (
     <div
-      className="fixed top-12 right-12 z-40 cursor-pointer text-white rotate-180"
+      className="fixed top-12 right-12 z-50 cursor-pointer text-primary rotate-180"
       onClick={() => setIsMenuOpen(!isMenuOpen)}
     >
       {isSmallScreen ? (
@@ -22,7 +22,11 @@ export const HamburgerMenuIcon = ({ setIsMenuOpen, isMenuOpen, isSmallScreen }: 
             transition: { duration: 0.3, ease: 'easeInOut' }
           }}
         >
-          {isMenuOpen ? <RiCloseFill size={30} /> : <RiMenu2Fill size={30} />}
+          {isMenuOpen ? (
+            <RiCloseFill size={30} className="text-red-500" fill="#3a4a4a" stroke="red" />
+          ) : (
+            <RiMenu2Fill size={30} className="text-red-500" fill="#3a4a4a" stroke="red" />
+          )}
         </motion.div>
       ) : (
         <PiMoonFill size={30} />

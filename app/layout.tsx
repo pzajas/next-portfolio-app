@@ -1,16 +1,9 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
 import './globals.css'
-
-const poppins = Poppins({
-  variable: '--font-poppins',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700']
-})
 
 export const metadata: Metadata = {
   title: 'Piotr Zajas Portfolio',
-  description: 'Modern and MInimalist next js portfolio'
+  description: 'Modern and Minimalist next js portfolio'
 }
 
 export default function RootLayout({
@@ -20,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={'font-gotham light h-full'}>{children}</body>
     </html>
   )
 }

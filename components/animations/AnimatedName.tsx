@@ -52,22 +52,34 @@ export const AnimatedName = () => {
   }, [name])
 
   return (
-    <motion.p className="text-[#a1a1a1] text-[1.2rem] font-semibold tracking-tight">
+    <motion.p className="text-[#2e6b6b] text-[18px] font-gotham font-[500] ml-0.5 sm:ml-1 xl:ml-1.5 leading-[18px]">
       {!isShuffling
         ? ' '
-        : shuffledName.map((letter, idx) => (
-            <span
-              key={idx}
-              style={{
-                display: 'inline-block',
-                width: '1.5ch',
-                textAlign: 'center',
-                letterSpacing: '0.1ch'
-              }}
-            >
-              {letter}
-            </span>
-          ))}
+        : shuffledName.map((letter, idx) => {
+            if (letter === ' ') {
+              return (
+                <span
+                  key={idx}
+                  style={{
+                    display: 'inline-block',
+                    width: '1ch'
+                  }}
+                />
+              )
+            }
+
+            return (
+              <span
+                key={idx}
+                style={{
+                  display: 'inline-block',
+                  letterSpacing: '0.4ch'
+                }}
+              >
+                {letter}
+              </span>
+            )
+          })}
     </motion.p>
   )
 }

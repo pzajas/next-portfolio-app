@@ -7,6 +7,12 @@
   --foreground: #171717;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -15,7 +21,7 @@
 }
 
 .menu__item {
-  @apply text-white text-2xl w-fit block relative cursor-pointer hover:text-red-500;
+  @apply text-primary font-gotham text-2xl w-fit block relative cursor-pointer hover:text-red-500;
 }
 
 .menu__item::after {
@@ -28,8 +34,57 @@
 }
 
 body {
+  background: var(--background);
   color: var(--foreground);
-  background: '#181818';
+  transition:
+    background-color 1s ease,
+    color 1s ease;
+  font-family: 'Gotham';
+  /* @apply font-sans; */
+}
 
-  @apply font-sans;
+.text-primary {
+  transition: color 2s ease;
+}
+
+.light {
+  --background: #ffffff;
+  --primary: #0c1717;
+}
+
+.dark {
+  --background: #181818;
+  --primary: #ffffff;
+}
+
+/* GLOBAL STYLES */
+
+.icon {
+  fill: var(--primary);
+}
+
+.icon__theme {
+  @apply text-primary group-hover:fill-yellow-500 transition-colors duration-300;
+}
+
+.menu__button--toggle {
+  @apply fill-current text-primary dark:text-white cursor-pointer;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('/fonts/gotham-bold.woff2') format('woff2'),
+    url('/fonts/gotham-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('/fonts/gotham-medium.woff2') format('woff2'),
+    url('/fonts/gotham-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
 }

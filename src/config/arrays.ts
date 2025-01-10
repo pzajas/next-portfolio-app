@@ -1,2 +1,2 @@
 export const menuItems = ['Home', 'About', 'Services', 'Contact']
-export const subheaderItems = ['FRONTEND', 'MOBILE', 'DESIGN']
+export const subheaderItems = ['+ Frontend', '+ Mobile', '+ Design']
