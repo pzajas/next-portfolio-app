@@ -10,6 +10,10 @@ export default {
 
   theme: {
     extend: {
+      screens: {
+        xs: '475px',
+        '3xl': '1920px'
+      },
       animation: {
         spinSlow: 'spinSlow 100s linear infinite'
       },

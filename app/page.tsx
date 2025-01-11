@@ -5,37 +5,17 @@ import { AnimatedName } from '@/components/animations/AnimatedName'
 import { AnimatedSubheader } from '@/components/animations/AnimatedSubheader'
 import { DisplacementSphere } from '@/components/displacement/displacement-sphere'
 import { ScrollIndicator } from '@/components/indicators/ScrollIndicator'
-import SwipeIndicator from '@/components/indicators/SwipeIndicator'
+import { SwipeIndicator } from '@/components/indicators/SwipeIndicator'
 import { HamburgerMenu } from '@/components/menus/HamburgerMenu'
 import { VerticalMenu } from '@/components/menus/VerticalMenu'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(typeof window !== 'undefined' ? window.innerWidth < 640 : false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isHydrated, setIsHydrated] = useState(false)
-
-  useEffect(() => {
-    setIsHydrated(true)
-
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 640)
-    }
-
-    handleResize()
-    window.addEventListener('resize', handleResize)
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  if (!isHydrated) {
-    return null
-  }
 
   return (
-    <main className="h-screen relative overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
-
+    <main className="h-screen relative overflow-y-auto no-scrollbar">
       <DisplacementSphere />
 
       <div className="flex flex-col h-screen w-full sm:w-[50%] mx-auto justify-between sm:items-center sm:text-center relative p-4 pb-8 z-50">
@@ -50,7 +30,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center animate-bounce">
+        <div className="flex justify-center items-center animate-bounce transition-opacity duration-300">
           {isSmallScreen ? <SwipeIndicator /> : <ScrollIndicator />}
         </div>
       </div>

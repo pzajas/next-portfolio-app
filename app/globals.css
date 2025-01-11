@@ -49,7 +49,7 @@ body {
 
 .light {
   --background: #ffffff;
-  --primary: #0c1717;
+  --primary: #1f2a37;
 }
 
 .dark {
@@ -87,4 +87,14 @@ body {
     url('/fonts/gotham-medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

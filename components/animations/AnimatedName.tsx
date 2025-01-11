@@ -52,7 +52,10 @@ export const AnimatedName = () => {
   }, [name])
 
   return (
-    <motion.p className="text-[#2e6b6b] text-[18px] font-gotham font-[500] ml-0.5 sm:ml-1 xl:ml-1.5 leading-[18px]">
+    <motion.p
+      className="text-primary text-[18px] xl:text-[24px] lg:-mb-10 xl:-mb-12 ml-0.5 sm:-mb-4 sm:ml-1 md:ml-1 lg:ml-1.5 xl:ml-2 2xl:ml-2.5
+        leading-[24px]"
+    >
       {!isShuffling
         ? ' '
         : shuffledName.map((letter, idx) => {

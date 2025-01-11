@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { PiMoonFill, PiSunFill } from 'react-icons/pi'
-
 interface ThemeToggleButtonProps {
   isDarkMode: boolean
   toggleTheme: () => void

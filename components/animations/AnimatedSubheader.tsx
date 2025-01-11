@@ -17,7 +17,7 @@ export const AnimatedSubheader = () => {
     <div className="relative">
       <motion.p
         className={
-          'text-primary text-[42px] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem] font-[500] m-0 relative z-0'
+          'text-primary text-[56px] sm:text-[64px] md:text-[4rem] lg:text-[6rem] xl:text-[7rem] 2xl:text-[9rem] '
         }
         key={currentWordIndex}
         initial={{ opacity: 0, x: 50 }}
